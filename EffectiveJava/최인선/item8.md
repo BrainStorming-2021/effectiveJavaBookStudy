@@ -1,4 +1,4 @@
-자바는 두 가지 객체 소멸자를 제공한다.
+# 자바는 두 가지 객체 소멸자를 제공한다.
 
 finalizer (finalize() 메소드)
 cleaner (Cleaner 객체)
@@ -80,3 +80,6 @@ public class Room implements AutoCloseable {
 3. close : AutoCloseable 인터페이스의 구현 메소드로 try-with-resources 문으로 관리되는 객체일 때 close() 메서드가 자동으로 호출된다. (Cleaner를 믿지 않고,, try-with-resources 블록으로 감싸서 close 메소드가 수행되게 하자)
 자원회수로직인 State 인스턴스는 절대로 Room 인스턴스를 참조해서는 안된다. 순환참조가 생길경우, GC가 Room인스턴스를 회수해갈 기회가 오지 않는다. State 가 정적 중첩 클래스인 이유가 여기 있다.
 정적이 아닌 중첩 클래스는 자동으로 바깥 객체의 참조를 갖게 되기 떄문이다.
+
+# 참고 사이트
+- https://www.itworld.co.kr/howto/224419
